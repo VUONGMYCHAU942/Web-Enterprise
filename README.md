@@ -17,5 +17,4 @@ _ In this projecct, We use Docker to be platform (same as google account).
 --
 **Notice**
 `
-- We using Google API (Gmail API, Drive API) to send mail notification feature and store files feature in requirement.
-
+# We using Google API (Gmail API, Drive API) to send mail notification feature and store files feature in requirement.

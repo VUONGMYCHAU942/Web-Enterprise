@@ -1,0 +1,21 @@
+<div class="row mb-5">
+    <% data.forEach(value => { %> 
+        <div class="col-12 col-md-4 col-lg-4 p-3">
+            <div class="card shadow-sm">
+                <div class="card-header">
+                    <h3 class="card-title"><%= value.name %></h3>
+                </div>
+                <div class="card-body card-scroll h-150px">
+                    <%= value.description %> 
+                </div>
+                <div class="card-footer">
+                    <span class="badge badge-warning m-1">Closure Date: <%= formatDate(value.closureDate) %></span>
+                    <span class="badge badge-danger m-1">Final Closure Data: <%= formatDate(value.finalClosureDate) %></span>
+                </div>
+                <a href="/sharing/<%= value._id %>" class="stretched-link"></a>
+            </div>
+        </div>
+    <% }) %> 
+</div>
+
+<%- include('../components/pagination.ejs') %> 

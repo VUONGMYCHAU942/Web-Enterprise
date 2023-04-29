@@ -1,0 +1,47 @@
+<div class="row d-flex flex-row">
+    <span class="badge badge-warning m-2 pt-3 pb-3 cursor-pointer" style="width: 10%;">Most popular</span>
+    <span class="badge badge-warning m-2 pt-3 pb-3 cursor-pointer" style="width: 10%;">Most viewed</span>
+    <span class="badge badge-warning m-2 pt-3 pb-3 cursor-pointer" style="width: 10%;">Latest ideas</span>
+</div>
+<div class="row mb-5">
+    <div class="col-12 col-md-4 col-lg-4 p-3">
+        <div class="card shadow-sm">
+            <div class="card-header">
+                <div class="card-title cursor-pointer symbol symbol-circle symbol-30px symbol-md-40px">
+                    <img alt="Pic" src="/img/blank.png" />
+                    <h4 class="ms-3 me-5">Anonymous</h4>
+                    <span class="badge badge-success">Angular</span>
+                </div>
+            </div>
+            <div class="card-body  card-scroll h-150px">
+                <h5>Title</h5>
+                <p>Description</p>
+                <p>Content</p>
+            </div>
+            <div class="card-footer">
+                <div class="d-flex justify-content-between">
+                    <div class="reaction">
+                        <i class="fas fa-thumbs-up"></i>
+                        <span id="like" class="me-5">3423</span>
+                        <i class="fas fa-thumbs-down ms-5"></i>
+                        <span id="dislike">300</span>
+                    </div>
+                    <div class="view">
+                        <i class="fas fa-eye"></i>
+                        <span id="view">430434</span>
+                    </div>
+                </div>
+                <div class="category mt-5">
+                    <span class="badge badge-secondary">New</span>
+                    <span class="badge badge-secondary">New</span>
+                    <span class="badge badge-secondary">New</span>
+                    <span class="badge badge-secondary">New</span>
+                    <span class="badge badge-secondary">New</span>
+                </div>
+            </div>
+            <!-- <a href="" class="stretched-link"></a> -->
+        </div>
+    </div>
+</div>
+
+<%- include('../components/pagination.ejs') %> 

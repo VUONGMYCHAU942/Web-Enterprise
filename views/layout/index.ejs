@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+	<!--begin::Head-->
+	<head><base href="">
+		<meta charset="utf-8" />
+		<title>Enterprise Web</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<!--begin::Fonts-->
+		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,600,700" />
+		<!--end::Fonts-->
+		<!--begin::Global Stylesheets Bundle(used by all pages)-->
+		<link href="/plugins/plugins.bundle.css" rel="stylesheet" type="text/css" />
+		<link href="/css/style.bundle.css" rel="stylesheet" type="text/css" />
+		<link href="/css/validation.css" rel="stylesheet" type="text/css">
+		<!--end::Global Stylesheets Bundle-->
+	</head>
+	<!--end::Head-->
+	<!--begin::Body-->
+	<body id="kt_body" class="header-fixed header-tablet-and-mobile-fixed aside-fixed">
+		<!--begin::Main-->
+		<div class="d-flex flex-column flex-root">
+			<!--begin::Page-->
+			<div class="page d-flex flex-row flex-column-fluid">
+
+				<!--begin::Aside-->
+				<% if (typeof(role) !== 'undefined' && role === 'manager') { %>
+					<%- include('../components/sidebar/sidebar-manager.ejs') %> 
+				<% } %>
+		
+				<% if (typeof(role) !== 'undefined' && role === 'coordinator') { %>
+					<%- include('../components/sidebar/sidebar-coordinator.ejs') %> 
+				<% } %>
+
+				<% if (typeof(role) !== 'undefined' && role === 'staff') { %>
+					<%- include('../components/sidebar/sidebar-staff.ejs') %> 
+				<% } %>
+				<!--end::Aside-->
+
+				<!--begin::Wrapper-->
+				<div class="wrapper d-flex flex-column flex-row-fluid" id="kt_wrapper">
+
+					<!--begin::Header-->
+					<%- include('../components/header/index.ejs') %> 
+					<!--end::Header-->
+					
+					<!--begin::Content-->
+					<div class="content d-flex flex-column flex-column-fluid fs-6" id="kt_content">
+						<!--begin::Container-->
+						<div class="container" id="kt_content_container">
+							<div class="card">
+								<div class="card-body">
+									<%- body %> 
+								</div>
+							</div>
+						</div>
+						<!--end::Container-->
+					</div> 
+					<!--end::Content-->
+					<!--begin::Footer-->
+					<%- include('../components/footer.ejs') %> 
+					<!--end::Footer-->
+				</div>
+				<!--end::Wrapper-->
+			</div>
+			<!--end::Page-->
+		</div>
+		<!--end::Main-->
+		<!--begin::Scrolltop-->
+		<div id="kt_scrolltop" class="scrolltop rounded-circle" data-kt-scrolltop="true">
+			<!--begin::Svg Icon | path: icons/duotone/Navigation/Up-2.svg-->
+			<span class="svg-icon">
+				<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
+					<g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+						<polygon points="0 0 24 0 24 24 0 24" />
+						<rect fill="#000000" opacity="0.5" x="11" y="10" width="2" height="10" rx="1" />
+						<path d="M6.70710678,12.7071068 C6.31658249,13.0976311 5.68341751,13.0976311 5.29289322,12.7071068 C4.90236893,12.3165825 4.90236893,11.6834175 5.29289322,11.2928932 L11.2928932,5.29289322 C11.6714722,4.91431428 12.2810586,4.90106866 12.6757246,5.26284586 L18.6757246,10.7628459 C19.0828436,11.1360383 19.1103465,11.7686056 18.7371541,12.1757246 C18.3639617,12.5828436 17.7313944,12.6103465 17.3242754,12.2371541 L12.0300757,7.38413782 L6.70710678,12.7071068 Z" fill="#000000" fill-rule="nonzero" />
+					</g>
+				</svg>
+			</span>
+			<!--end::Svg Icon-->
+		</div>
+		<!--end::Scrolltop-->
+		<!--begin::Javascript-->
+		<!--begin::Global Javascript Bundle(used by all pages)-->
+		<script src="/plugins/plugins.bundle.js"></script>
+		<script src="/js/scripts.bundle.js"></script>
+		<!--end::Global Javascript Bundle-->
+		<!--begin::Page Custom Javascript(used by this page)-->
+		<script src="/js/widgets.js"></script>
+
+		<script src="/lib/jquery.validate.min.js"></script>
+		<script src="/lib/additional-methods.min.js"></script>
+
+		<script src="/js/api/getAccounts.js"></script>
+		<script src="/js/api/getCategory.js"></script>
+		<script src="/js/api/getDepartment.js"></script>
+		<script src="/js/api/getSubmission.js"></script>
+
+		<script src="/js/form/message.js"></script>
+		<script src="/js/form/method-validation.js"></script>
+		<script src="/js/form/accounts.js"></script>
+		<script src="/js/form/category.js"></script>
+		<script src="/js/form/department.js"></script>
+		<script src="/js/form/submission.js"></script>
+		<script src="/js/form/idea.js"></script>
+
+		<script src="/js/chart/color.js"></script>
+		<script src="/js/chart/manager.js"></script>
+		<script src="/js/chart/coordinator.js"></script>
+		<!--end::Page Custom Javascript-->
+		<!--end::Javascript-->
+	</body>
+	<!--end::Body-->
+</html>

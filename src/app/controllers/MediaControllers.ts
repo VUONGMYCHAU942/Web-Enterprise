@@ -1,4 +1,4 @@
-import { Router } from "express";
+import { Router, Request, Response } from "express";
 
 class MediaController {
     router = Router();
@@ -16,6 +16,13 @@ class MediaController {
         this.router.route('/')
             .get()
             .post()
+    }
+
+    private responseError = (res: Response) => {
+        res.status(500).json({
+            status: 500,
+            message: 'Something went wrong.'
+        })
     }
 
     private createMedia = () => {

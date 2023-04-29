@@ -6,11 +6,12 @@ import departmentControllers from '../app/controllers/DepartmentControllers'
 import mediaControllers from '../app/controllers/MediaControllers'
 import submissionControllers from '../app/controllers/SubmissionControllers'
 import userControllers from '../app/controllers/UserControllers'
+import { upload } from '../config/multer'
 
 const apiRouter = Router()
 
 apiRouter.use('/category', categoryControllers.router)
-apiRouter.use('/idea', ideaControllers.router)
+apiRouter.use('/idea', upload.array('documents', 5), ideaControllers.router)
 apiRouter.use('/comment', commentControllers.router)
 apiRouter.use('/user', userControllers.router)
 apiRouter.use('/media', mediaControllers.router)

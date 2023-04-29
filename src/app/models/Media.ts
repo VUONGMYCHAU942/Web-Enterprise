@@ -14,7 +14,6 @@ const MediaSchema = new Schema(
     },
     folderDriveId: { type: String, maxlength: 50, unique: true, required: true },
     folderDrivePath: { type: String, maxlength: 100, required: true },
-    submission: {type: Schema.Types.ObjectId, required: true, ref: 'Submission'}
   },
   {
     timestamps: { createdAt: 'created_at', updatedAt: 'updated_at' }

@@ -1,0 +1,33 @@
+<div class="table-responsive">
+    <table class="table table-hover gy-7 gs-7">
+        <% if(data.length > 0) { %> 
+            <thead>
+                <tr class="fw-bold fs-6 text-gray-800 border-bottom-2 border-gray-200">
+                    <th class="min-w-50px">No</th>
+                    <th class="min-w-100px">Full Name</th>
+                    <th class="min-w-200px">Username</th>
+                    <th class="min-w-100px">Email</th>
+                    <th class="min-w-150px">Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                <% data.forEach((value, index) => { %> 
+                    <tr>
+                        <td><%= index + 1 %></td>
+                        <td><%= value.fullname %></td>
+                        <td><%= value.username%></td>
+                        <td><%= value.email %></td>
+                        <td>
+                            <i class="fas fa-pen text-warning fs-5 me-5 cursor-pointer update-manager-account" data-id="<%= value._id %>" data-bs-toggle="modal" data-bs-target="#manager_accounts_update"></i>
+                            <i class="fas fa-trash text-danger fs-5 cursor-pointer remove-manager-account" data-id="<%= value._id %>" data-bs-toggle="modal" data-bs-target="#delete_form"></i>
+                        </td>
+                    </tr>
+                <% }) %> 
+            </tbody>
+        <% } else { %> 
+            <div class="row g-3 text-center">
+                <h3>No Record</h3>
+            </div>
+        <% } %> 
+    </table>
+</div>

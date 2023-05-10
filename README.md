@@ -14,14 +14,12 @@
 
 - In this projecct, We use Docker to be platform.
 
-4. Fly.io
-
-<!-- Account for System: -->
+# Account for System
 
 - Username: flask, Password: greenwichvn@123, role: QA Manager.
 - Username: tango, Password: greenwichvn@123, role: QA Coordinator.
 - Username: charlie, Password: greenwichvn@123, role:  Staff.
 
-<!-- **Notice** -->
+# Notice
 
 - We using Google API (Gmail API, Drive API) to send mail notification feature and store files feature in requirement.
